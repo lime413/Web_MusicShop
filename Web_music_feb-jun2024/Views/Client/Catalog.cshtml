@@ -1,0 +1,97 @@
+﻿@{
+    ViewData["Title"] = "Каталог";
+}
+
+<nav aria-label="breadcrumb" class="nav-breadcrumb">
+    <ol class="breadcrumb breadcrumb-chevron p-3 bg-body-tertiary rounded-3">
+        <li class="breadcrumb-item">
+            <a asp-controller="Client" asp-action="Home" class="link-body-emphasis">
+                <i class="icon-location"></i>
+            </a>
+        </li>
+        <li class="breadcrumb-item">
+            <a href="#" class="link-body-emphasis fw-semibold text-decoration-none">
+                Каталог
+            </a>
+        </li>
+    </ol>
+</nav>
+
+<div class="row">
+    <div class="col-md-4 col-lg-3">
+        <div class="dropend catalog-dropend">
+            <button type="button" class="btn btn-primary dropdown-toggle"
+                    data-bs-toggle="dropdown" aria-expanded="true" data-bs-auto-close="outside">
+                Микрофоны и радиосистемы
+            </button>
+            <ul class="dropdown-menu">
+                <li class="dropend">
+                    <a class="dropdown-item dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
+                        Микрофоны
+                    </a>
+                    <ul class="dropdown-menu">
+                        <li><a class="dropdown-item" href="#">Инструментальные</a></li>
+                        <li><a class="dropdown-item" href="#">Студийные</a></li>
+                        <li><a class="dropdown-item" href="#">Петличные</a></li>
+                    </ul>
+                </li>
+                <li class="dropend">
+                    <a class="dropdown-item dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
+                        Радиосистемы
+                    </a>
+                    <ul class="dropdown-menu">
+                        <li><a class="dropdown-item" href="#">Вокальные</a></li>
+                        <li><a class="dropdown-item" href="#">Для ТВ и радио</a></li>
+                        <li><a class="dropdown-item" href="#">Головные</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+        <div class="dropend">
+            <button type="button" class="btn btn-primary dropdown-toggle"
+                    data-bs-toggle="dropdown" aria-expanded="true" data-bs-auto-close="outside">
+                Микрофоны и радиосистемы
+            </button>
+            <ul class="dropdown-menu">
+                <li class="dropend">
+                    <a class="dropdown-item dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
+                        Микрофоны
+                    </a>
+                    <ul class="dropdown-menu">
+                        <li><a class="dropdown-item" href="#">Инструментальные</a></li>
+                        <li><a class="dropdown-item" href="#">Студийные</a></li>
+                        <li><a class="dropdown-item" href="#">Петличные</a></li>
+                    </ul>
+                </li>
+                <li class="dropend">
+                    <a class="dropdown-item dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
+                        Радиосистемы
+                    </a>
+                    <ul class="dropdown-menu">
+                        <li><a class="dropdown-item" href="#">Вокальные</a></li>
+                        <li><a class="dropdown-item" href="#">Для ТВ и радио</a></li>
+                        <li><a class="dropdown-item" href="#">Головные</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <div class="col-md-4 col-lg-3 col-sm-12">
+        <div class="card">
+            <img src="/img/ukulele1.png" class="card-img-top" alt="...">
+            <div class="card-body">
+                <p class="card-text">Укулеле</p>
+                <h5 class="card-title">FLIGHT TUS ALYONA SHVETZ</h5>
+                <p class="card-text card-price">4 840 р.</p>
+                <p class="card-text card-rating">
+                    <i class="icon-star"></i>
+                    5
+                    <small class="card-reviews">
+                        125 отзывов
+                    </small>
+                </p>
+                <a href="#" class="btn btn-primary card-button">В корзину</a>
+            </div>
+        </div>
+    </div>
+</div>
