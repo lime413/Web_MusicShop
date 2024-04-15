@@ -28,6 +28,11 @@ namespace Web_music_feb_jun2024.Controllers
             return View();
         }
 
+        public IActionResult Card()
+        {
+            return View();
+        }
+
         [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
         public IActionResult Error()
         {
