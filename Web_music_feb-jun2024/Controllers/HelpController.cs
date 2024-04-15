@@ -4,26 +4,36 @@ using Web_music_feb_jun2024.Models;
 
 namespace Web_music_feb_jun2024.Controllers
 {
-    public class ClientController : Controller
+    public class HelpController : Controller
     {
-        private readonly ILogger<ClientController> _logger;
+        private readonly ILogger<HelpController> _logger;
 
-        public ClientController(ILogger<ClientController> logger)
+        public HelpController(ILogger<HelpController> logger)
         {
             _logger = logger;
         }
 
-        public IActionResult Catalog()
+        public IActionResult WhereOrder()
         {
             return View();
         }
 
-        public IActionResult Home()
+        public IActionResult Hotline()
         {
             return View();
         }
 
-        public IActionResult Shops()
+        public IActionResult Guarantee()
+        {
+            return View();
+        }
+
+        public IActionResult ServiceCentres()
+        {
+            return View();
+        }
+
+        public IActionResult ExchangeAndReturn()
         {
             return View();
         }

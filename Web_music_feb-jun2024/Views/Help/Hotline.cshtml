@@ -1,0 +1,121 @@
+﻿@{
+    ViewData["Title"] = "Горячая линия";
+}
+
+<div class="container">
+    <nav aria-label="breadcrumb" class="nav-breadcrumb">
+        <ol class="breadcrumb breadcrumb-chevron p-3 bg-body-tertiary rounded-3 bg-light">
+            <li class="breadcrumb-item">
+                <a asp-controller="Client" asp-action="Home" class="link-body-emphasis">
+                    <i class="icon-home"></i>
+                </a>
+            </li>
+            <li class="breadcrumb-item">
+                <a href="#" class="link-body-emphasis fw-semibold text-decoration-none">
+                    Горячая линия
+                </a>
+            </li>
+        </ol>
+    </nav>
+</div>
+<section>
+    <div class="row">
+        <div class="col col-6 offset-2">
+            <h3 class="mt-3 mb-4">ПОДДЕРЖКА КЛИЕНТОВ (ГОРЯЧАЯ ЛИНИЯ)</h3>
+            <p>Дорогие друзья!</p>
+            <p>Для Вас работает Служба поддержки клиентов 8 (800) 555-00-75.</p>
+            <p>Служба принимает звонки:</p>
+            <p class="mb-2">
+                <ul>
+                    <li>
+                        Будние дни с 08:00 до 21:00 по московскому времени
+                    </li>
+                    <li>
+                        Выходные и праздничные дни с 09:00 до 20:00 по московскому времени
+                    </li>
+                </ul>
+            </p>
+            <button type="button" class="btn btn-primary mx-2" data-bs-toggle="modal" data-bs-target="#modalReview">
+                Оставить отзыв
+            </button>
+            <div class="modal fade" id="modalReview" aria-labelledby="modalReview" aria-hidden="true">
+                <div class="modal-dialog">
+                    <div class="modal-content">
+                        <div class="modal-header bg-darkteal">
+                            <h5 class="modal-title text-white" id="modalReview">Обратная связь</h5>
+                        </div>
+                        <div class="modal-body">
+                            <form>
+                                <div class="mb-3">
+                                    <label class="form-label" for="inputName">Ваше имя</label>
+                                    <input type="text" class="form-control" id="inputName" placeholder="Иван">
+                                </div>
+                                <div class="mb-3">
+                                    <label class="form-label" for="inputEmail">Ваш e-mail</label>
+                                    <input type="email" class="form-control" id="inputEmail" placeholder="example@gmail.com">
+                                </div>
+                                <div class="mb-3">
+                                    <label class="form-label" for="inputNumber">Номер заказа (если есть)</label>
+                                    <input type="text" class="form-control" id="inputNumber" placeholder="XXXXXXXX">
+                                </div>
+                                <div class="mb-3">
+                                    <label class="form-label" for="inputMessage">Текст сообщения</label>
+                                    <input type="text" class="form-control" id="inputMessage">
+                                </div>
+                            </form>
+                            <button type="button" class="btn btn-primary me-2">Отправить</button>
+                            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Закрыть</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#modalCall">
+                Заказать обратный звонок
+            </button>
+            <div class="modal fade" id="modalCall" aria-labelledby="modalCall" aria-hidden="true">
+                <div class="modal-dialog">
+                    <div class="modal-content">
+                        <div class="modal-header bg-darkteal">
+                            <h5 class="modal-title text-white" id="modalCall">Заказать звонок</h5>
+                        </div>
+                        <div class="modal-body">
+                            <form>
+                                <div class="mb-3">
+                                    <label class="form-label" for="inputName">Ваше имя</label>
+                                    <input type="text" class="form-control" id="inputName" placeholder="Иван">
+                                </div>
+                                <div class="mb-3">
+                                    <label class="form-label" for="inputPhone">Ваш телефон</label>
+                                    <input type="tel" class="form-control" id="inputPhone" placeholder="+7 (999) 999 99 99">
+                                </div>
+                                <div class="mb-3">
+                                    <label class="form-label" for="inputDate">Дата звонка</label>
+                                    <input type="date" class="form-control" id="inputDate">
+                                </div>
+                                <div class="mb-3">
+                                    <label class="form-label" for="inputTime">Время звонка</label>
+                                    <input type="time" class="form-control" id="inputTime">
+                                </div>
+                                <div class="mb-3">
+                                    <label class="form-label" for="inputComment">Комментарий</label>
+                                    <textarea class="form-control" id="inputComment" rows="3"></textarea>
+                                </div>
+                            </form>
+                            <button type="button" class="btn btn-primary me-2">Отправить</button>
+                            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Закрыть</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <p class="mt-4 p-3 bg-light rounded-2">
+                Если вы хотите уточнить информацию о наличии оборудования в магазинах сети, 
+                поделиться с нами предложениями как нам стать лучше, получить информацию о 
+                концертах, акциях или других мероприятиях в LUFS - звоните! Или закажите 
+                обратный звонок и наши менеджеры перезвонят Вам в удобное для Вас время.
+            </p>
+        </div>
+        <div class="col col-2">
+            <img src="~/img/hotline.jpg">
+        </div>
+    </div>
+</section>

@@ -4,9 +4,9 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>@ViewData["Title"] - LUFS</title>
-    <link rel="stylesheet" href="/lib/bootstrap/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="/lib/bootstrap/dist/css/custom-bootstrap.css" />
     <link rel="stylesheet" href="/css/animation.css" />
-    <link rel="stylesheet" href="/css/fontello.css/>
+    <link rel="stylesheet" href="/css/fontello.css"/>
     <link rel="stylesheet" href="/css/fontello-codes.css" />
     <link rel="stylesheet" href="/css/fontello-embedded.css" />
     <link rel="stylesheet" href="/css/fontello-ie7.css" />
@@ -55,10 +55,11 @@
                                 Помощь
                             </a>
                             <ul class="dropdown-menu">
-                                <li><a class="dropdown-item" href="#">Как?</a></li>
-                                <li><a class="dropdown-item" href="#">Зачем?</a></li>
-                                <li><a class="dropdown-item" href="#">Где?</a></li>
-                                <li><a class="dropdown-item" href="#">И почему?</a></li>
+                                <li><a class="dropdown-item" asp-controller="Help" asp-action="WhereOrder">Где мой заказ?</a></li>
+                                <li><a class="dropdown-item" asp-controller="Help" asp-action="Hotline">Горячая линия</a></li>
+                                <li><a class="dropdown-item" asp-controller="Help" asp-action="Guarantee">Гарантия</a></li>
+                                <li><a class="dropdown-item" asp-controller="Help" asp-action="ServiceCentres">Сервис-центры</a></li>
+                                <li><a class="dropdown-item" asp-controller="Help" asp-action="ExchangeAndReturn">Обмен и возврат</a></li>
                             </ul>
                         </li>
                         <li class="nav-item nav-item-mine">
@@ -80,7 +81,7 @@
 
 
 
-    <div class="container">
+    <div>
         @RenderBody()
     </div>
 
@@ -98,17 +99,17 @@
             </div>
             <ul class="nav col-md-4 justify-content-end list-unstyled d-flex">
                 <li class="ms-3">
-                    <a href="#" class="text-body-secondary">
+                    <a href="https://github.com/lime413/Web_music_feb-jun2024" class="text-body-secondary">
                         <i class="icon-github footer-icon"></i>
                     </a>
                 </li>
                 <li class="ms-3">
-                    <a href="#" class="text-body-secondary">
+                    <a href="https://vk.com/mrevans" class="text-body-secondary">
                         <i class="icon-vkontakte footer-icon"></i>
                     </a>
                 </li>
                 <li class="ms-3">
-                    <a href="#" class="text-body-secondary">
+                    <a href="https://t.me/strangeplanetrus" class="text-body-secondary">
                         <i class="icon-telegram footer-icon"></i>
                     </a>
                 </li>
@@ -116,9 +117,12 @@
         </footer>
     </div>
 
-    <script src="~/lib/jquery/dist/jquery.min.js"></script>
-    <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
-    <script src="~/js/site.js" asp-append-version="true"></script>
+
+
+
+
+    <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.js"></script>
+    <script src="~/js/site.js"></script>
     @await RenderSectionAsync("Scripts", required: false)
 </body>
 </html>

@@ -34,11 +34,6 @@ body {
     height: auto;
 }
 
-a {
-    color: black;
-    text-decoration: none; /* no underline */
-}
-
 .row-header {
     margin: 10px auto;
 }
@@ -60,12 +55,8 @@ a {
     --bs-breadcrumb-divider: '>';
 }
 
-.navbar-light .navbar-nav .nav-link:hover {
+.nav-link:hover {
     color: teal !important;
-}
-
-.catalog-dropend {
-    margin: 3px auto;
 }
 
 .card-price {
@@ -77,6 +68,10 @@ a {
     width: 100%;
 }
 
+.catalog-dropend-button {
+    width: 100%;
+}
+
 .card-rating {
     color: red;
 }
@@ -84,4 +79,8 @@ a {
 .card-reviews {
     color: gray;
     margin: auto auto auto 15px;
+}
+
+.link {
+    --bs-link-hover-color-rgb: 25, 135, 84;
 }

@@ -1,0 +1,282 @@
+﻿@{
+    ViewData["Title"] = "Обмен и возврат";
+}
+
+<div class="container">
+    <nav aria-label="breadcrumb" class="nav-breadcrumb">
+        <ol class="breadcrumb breadcrumb-chevron p-3 bg-body-tertiary rounded-3">
+            <li class="breadcrumb-item">
+                <a asp-controller="Client" asp-action="Home" class="link-body-emphasis">
+                    <i class="icon-home"></i>
+                </a>
+            </li>
+            <li class="breadcrumb-item">
+                <a href="#" class="link-body-emphasis fw-semibold text-decoration-none">
+                    Обмен и возврат
+                </a>
+            </li>
+        </ol>
+    </nav>
+</div>
+<section>
+    <div class="row">
+        <div class="col col-8 offset-2">
+            <h3 class="mt-3 mb-4">ПРАВИЛА ОБМЕНА И ВОЗВРАТА</h3>
+            <p class="fw-bolder">КАК ВЕРНУТЬ ИЛИ ОБМЕНЯТЬ ТОВАР В LUFS?</p>
+            <p>Все очень просто!</p>
+            <p>Если вы обнаружили дефект, или решили поменять товар на другой товар, или же просто передумали по дороге домой, мы всегда рады вам помочь!</p>
+            <p>Процесс обмена/возврата:</p>
+            <p>
+                <ul>
+                    <li>
+                        Вы заполняете <a>эту форму</a> и ваше обращение автоматически отправится специалистам клиентского отдела.
+                    </li>
+                    <li>
+                        В течение 3-4 рабочих дней с Вами свяжется менеджер для уточнения и
+                        разрешения сложившейся ситуации. Обычно мы связываемся на следующий день, но могут быть задержки.
+                    </li>
+                </ul>
+            </p>
+            <p>
+                Также вы можете заполнить <a>эту форму</a> и распечатать ее (после заполнения
+                она придёт на e–mail, который Вы укажете при заполнении) и прийти вместе с ней и с товаром <a asp-controller="Client" asp-action="Shops">в один из наших магазинов</a>.
+            </p>
+            <p class="mt-4 p-3 bg-light rounded-2">
+                ОБЩИЕ УСЛОВИЯ ОБМЕНА/ВОЗВРАТА, СОГЛАСНО ФЗ ЗОЗПП:<br/>
+            Для качественных музыкальных инструментов и оборудования срок возврата зависит
+            от категории инструмента и характера покупки. Для акустических инструментов он
+            составляет 14 дней. Для купленной через интернет-магазин электроники – 7 дней.
+            Электроника, приобретенная в рознице, возврату не подлежит. Это возможно только на основании заключения сервисного центра.
+            </p>
+            <p>СПОСОБЫ ВОЗВРАТА/ОБМЕНА ТОВАРА</p>
+            <div class="accordion" id="accordionExchangeAndReturn">
+                <div class="accordion-item">
+                    <h2 class="accordion-header">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#accordionExchangeAndReturn-1" aria-expanded="true" aria-controls="panelsStayOpen-collapseOne">
+                            Если Вы приобрели товар в розничном магазине или через самовывоз
+                        </button>
+                    </h2>
+                    <div id="accordionExchangeAndReturn-1" class="accordion-collapse collapse">
+                        <div class="accordion-body">
+                            <p>Необходимо обратиться в тот магазин, где была совершена покупка.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="accordion-item">
+                    <h2 class="accordion-header">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#accordionExchangeAndReturn-2" aria-expanded="true" aria-controls="panelsStayOpen-collapseOne">
+                            Если Вы приобрели товар с доставкой по Москве
+                        </button>
+                    </h2>
+                    <div id="accordionExchangeAndReturn-2" class="accordion-collapse collapse">
+                        <div class="accordion-body">
+                            <p>
+                                Просим Вас обратиться в магазин по адресу: г.Москва, м.Таганская радиальная,
+                                ул.Краснохолмская наб., д. 3. Вывоз некачественного товара в Москве курьерской
+                                службой компании LUFS производится в исключительных случаях и только если вес товара превышает 5 кг.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="accordion-item">
+                    <h2 class="accordion-header">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#accordionExchangeAndReturn-3" aria-expanded="true" aria-controls="panelsStayOpen-collapseOne">
+                            Если Вы приобрели товар с доставкой по Санкт-Петербургу
+                        </button>
+                    </h2>
+                    <div id="accordionExchangeAndReturn-3" class="accordion-collapse collapse">
+                        <div class="accordion-body">
+                            <p>
+                                Просим Вас обратиться в магазин по адресу: г.Санкт-Петербург м.Лиговский проспект
+                                ул. Марата, д.53. Вывоз некачественного товара в Санкт-Петербурге курьерской
+                                службой компании LUFS производится в исключительных случаях и только если вес товара превышает 5 кг.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="accordion-item">
+                    <h2 class="accordion-header">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#accordionExchangeAndReturn-4" aria-expanded="true" aria-controls="panelsStayOpen-collapseOne">
+                            Если Вы приобрели товар с доставкой по России
+                        </button>
+                    </h2>
+                    <div id="accordionExchangeAndReturn-4" class="accordion-collapse collapse">
+                        <div class="accordion-body">
+                            <p>
+                                Просим Вас заполнить заявление на возврат и дождаться звонка
+                                специалиста клиентского отдела, который расскажет каким образом это
+                                осуществимо. Ничего сложного – всего лишь отправить товар на адрес:
+                                г.Москва, м.Таганская радиальная, ул.Краснохолмская наб., д. 3.,
+                                без звонка специалиста просим Вас не отправлять товар. Когда
+                                экспертиза признает возврат гарантийным случаем (в течение 3-4 рабочих дней)
+                                - мы полностью компенсируем Ваши денежные затраты на перемещение товара.
+                                Возврат денег или отправка нового товара выполняется после получения и
+                                проверки товара на целостность упаковки, комплектность и работоспособность.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="accordion-item">
+                    <h2 class="accordion-header">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#accordionExchangeAndReturn-5" aria-expanded="true" aria-controls="panelsStayOpen-collapseOne">
+                            В процессе получения товара в магазине или при курьере
+                        </button>
+                    </h2>
+                    <div id="accordionExchangeAndReturn-5" class="accordion-collapse collapse">
+                        <div class="accordion-body">
+                            <p>
+                                Просто скажите чем он не подошел - это поможет нам совершенствовать наш сервис и товары.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="accordion-item">
+                    <h2 class="accordion-header">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#accordionExchangeAndReturn-6" aria-expanded="true" aria-controls="panelsStayOpen-collapseOne">
+                            Возврат за товар, оплаченный через сторонние службы доставки по факту получения товара
+                        </button>
+                    </h2>
+                    <div id="accordionExchangeAndReturn-6" class="accordion-collapse collapse">
+                        <div class="accordion-body">
+                            <p>
+                                Осуществляется в безналичном порядке. Для возврата такого товара
+                                необходимо предоставить удостоверение личности, банковские реквизиты карты/счета, кассовый чек
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <h3 class="mt-3 mb-4 mt-4">ВОЗВРАТ ТОВАРА НАДЛЕЖАЩЕГО КАЧЕСТВА</h3>
+            <p class="mt-4 p-3 bg-light rounded-2">
+                В соответствие с п. 4 ст. 26.1 ФЗ «О защите прав потребителей» и п.
+                21 Постановления Правительства РФ « Об утверждении правил продажи товаров
+                дистанционным способом» потребитель (покупатель) имеет право отказаться от
+                товара надлежащего качества если он НЕ БЫЛ В УПОТРЕБЛЕНИИ) в любое время до
+                его передачи, а после передачи – в течение 7 дней. При этом, обмен товара
+                надлежащего качества возможен только в случае, если товар не включен в перечень
+                товаров надлежащего качества, не подлежащих возврату утвержденный Постановлением
+                Правительства РФ №55 от 19.01.1998 г. Также необходимым условием для возврата и
+                обмена покупки является сохранение ее товарного вида, комплектации, упаковки,
+                а также товарного или кассового чека.
+            </p>
+            <div class="container">
+                <div class="row">
+                    <div class="col col-6">
+                        <p class="fw-bolder">
+                            В КАКОЙ СРОК МОЖНО ВЕРНУТЬ ТОВАР?
+                        </p>
+                        <p>
+                            Срок возврата зависит от категории инструмента и способа покупки.
+                            При покупке акустических инструментов в розничном магазине он составляет
+                            14 дней. Качественная электроника, приобретенная в рознице, возврату не
+                            подлежит. Для товаров, купленных через интернет-магазин, срок возврата составляет 7 дней.
+                        </p>
+                        <p>
+                            Возврат возможен при условии, что товар не
+                            был в использовании, программное обеспечение не
+                            было активировано, сохранены внешний вид, потребительские
+                            свойства, упаковка и комплектация, фабричные пломбы и ярлыки.
+                        </p>
+                        <p>При наличии неисправности решение о возврате принимается на основании заключения сервисного центра.</p>
+                        <p>Правила возврата не распространяются на уцененные товары.</p>
+                    </div>
+                    <div class="col col-6">
+                        <p class="fw-bolder">
+                            ПРАВИЛА ВОЗВРАТА ДЕНЕЖНЫХ СРЕДСТВ
+                        </p>
+                        <p>
+                            Возврату подлежит уплаченная сумма, за исключением расходов
+                            на доставку товара, а также других расходов Интернет-магазина,
+                            подлежащих компенсации за счет Покупателя (Ст. 26.1 Закона «О
+                            защите прав потребителей»). Максимальный срок возврата денег
+                            за возвращенный товар – 10 дней. Как правило, это происходит
+                            за 2 рабочих дня. Мы делаем все возможное, для того, что бы Вы
+                            получили денежные средств как можно быстрее.
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <h3 class="mt-3 mb-4">ВОЗВРАТ НЕКАЧЕСТВЕННОГО ТОВАРА</h3>
+            <p class="mt-4 p-3 bg-light rounded-2">
+            ЧТО ДЕЛАТЬ, ЕСЛИ В КУПЛЕННОМ ТОВАРЕ ОБНАРУЖЕНА НЕИСПРАВНОСТЬ?
+            При обнаружении в товаре недостатков просим Вас сразу же обратиться к нам в отдел по работе с
+            Покупателями по телефону: 8 800 555-00-75 или по e-mail: quality@lufs.ru
+            </p>
+            <p>ЕСЛИ ПРОШЛО МЕНЕЕ 7 ДНЕЙ С МОМЕНТА ПОКУПКИ</p>
+            <p>
+                При приемке некачественного товара от покупателя производится осмотр
+                товара на предмет механических повреждений, следов вскрытия и неправильного
+                использования. После того как повреждение товара исключено, клиент
+                заполняет заявление на возврат и, в зависимости от местонахождения, передает его
+                лично, либо высылает скан с подписью по электронной почте.
+            </p>
+            <div class="accordion mb-4" id="accordionReturn">
+                <div class="accordion-item">
+                    <h2 class="accordion-header">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#accordionReturn-1" aria-expanded="true" aria-controls="panelsStayOpen-collapseOne">
+                            Москва
+                        </button>
+                    </h2>
+                    <div id="accordionReturn-1" class="accordion-collapse collapse">
+                        <div class="accordion-body">
+                            <p>
+                                Если товар весит менее 5 кг., клиент осуществляет самостоятельный
+                                возврат товара в магазин (если товар был куплен в магазине -
+                                в тот же магазин, если доставлен курьером - в магазин по адресу:
+                                г.Москва, м.Таганская радиальная, ул.Краснохолмская наб., д. 3.
+                            </p>
+                            <p>
+                                Если товар весит более 5 кг, возможен возврат силами курьерской службы. 
+                                После осмотра товара принимается решение о возврате денежных средств.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="accordion-item">
+                    <h2 class="accordion-header">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#accordionReturn-2" aria-expanded="true" aria-controls="panelsStayOpen-collapseOne">
+                            Санкт-Петербург
+                        </button>
+                    </h2>
+                    <div id="accordionReturn-2" class="accordion-collapse collapse">
+                        <div class="accordion-body">
+                            <p>
+                                Если товар весит менее 5 кг., клиент осуществляет 
+                                самостоятельный возврат товара в магазин (если товар был 
+                                куплен в магазине - в тот же магазин, если доставлен курьером -
+                                в магазин по адресу: г.Санкт-Петербург м.Лиговский проспект ул. Марата, д.53.
+                            </p>
+                            <p>
+                                Если товар весит более 5 кг, возможен возврат силами курьерской службы.
+                                После осмотра товара принимается решение о возврате денежных средств.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="accordion-item">
+                    <h2 class="accordion-header">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#accordionReturn-3" aria-expanded="true" aria-controls="panelsStayOpen-collapseOne">
+                            Регионы России
+                        </button>
+                    </h2>
+                    <div id="accordionReturn-3" class="accordion-collapse collapse">
+                        <div class="accordion-body">
+                            <p>
+                                Приемка товара на диагностику производится 
+                                непосредственно в Сервисном центре или в магазине, в котором приобретался товар.
+                            </p>
+                            <p>
+                                Если товар весит более 5 кг, возможен забор товара силами 
+                                ТК. Если в Вашем городе нет магазина LUFS и нет Сервисного центра - свяжитесь с нами!
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <p class="fw-bolder">
+                ЕСЛИ ГАРАНТИЯ ЗАКОНЧИЛАСЬ
+            </p>
+            <p>просим Вас обратиться в любой удобный <a asp-controller="Help" asp-action="ServiceCentres">Сервисный центр</a>.</p>
+        </div>
+    </div>
+</section>

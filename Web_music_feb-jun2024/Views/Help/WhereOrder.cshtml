@@ -1,0 +1,45 @@
+﻿@{
+    ViewData["Title"] = "Где мой заказ?";
+}
+
+<div class="container">
+    <nav aria-label="breadcrumb" class="nav-breadcrumb">
+        <ol class="breadcrumb breadcrumb-chevron p-3 bg-body-tertiary rounded-3 bg-light">
+            <li class="breadcrumb-item">
+                <a asp-controller="Client" asp-action="Home" class="link-body-emphasis">
+                    <i class="icon-home"></i>
+                </a>
+            </li>
+            <li class="breadcrumb-item">
+                <a href="#" class="link-body-emphasis fw-semibold text-decoration-none">
+                    Где мой заказ?
+                </a>
+            </li>
+        </ol>
+    </nav>
+</div>
+<section>
+    <div class="row">
+        <div class="col col-8 offset-2">
+            <h3 class="mt-3 mb-4">Где мой заказ?</h3>
+            <p class="mb-4">Проверьте состояние своего заказа</p>
+        </div>
+    </div>
+</section>
+<section id="formWhereOrder" class="bg-light py-3">
+    <div class="row">
+        <div class="col col-8 offset-2">
+            <form>
+                <div class="mb-5">
+                    <label for="inputNumber" class="form-label">Номер заказа</label>
+                    <input type="number" class="form-control" id="inputNumber" placeholder="XXXXXXXX">
+                </div>
+                <div class="mb-5">
+                    <label for="inputEmail" class="form-label">E-mail</label>
+                    <input type="email" class="form-control" id="inputEmail" placeholder="example@gmail.com">
+                </div>
+                <button type="submit" class="btn btn-primary">Проверить</button>
+            </form>
+        </div>
+    </div>
+</section>
