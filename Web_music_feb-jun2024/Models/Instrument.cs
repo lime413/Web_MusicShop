@@ -7,6 +7,8 @@
         public string Manufacturer { get; set; }
         public InstrumentClass Class { get; set; }
         public decimal Price { get; set; }
+        public string Rating { get; set; }
+        public string Img { get; set; }
         public string Articul { get; set; }
     }
 }

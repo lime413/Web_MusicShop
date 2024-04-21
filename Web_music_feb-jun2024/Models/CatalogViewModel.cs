@@ -2,7 +2,7 @@
 {
     public class CatalogViewModel
     {
-        List<InstrumentClass> instrumentClasses;
-        List<Instrument>? instruments;
+        public IEnumerable<InstrumentClass> instrumentClasses;
+        public IEnumerable<Instrument>? instruments;
     }
 }

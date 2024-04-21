@@ -40,6 +40,8 @@ namespace Web_music_feb_jun2024.Migrations
                     Manufacturer = table.Column<string>(type: "text", nullable: false),
                     ClassId = table.Column<int>(type: "integer", nullable: false),
                     Price = table.Column<decimal>(type: "numeric", nullable: false),
+                    Rating = table.Column<string>(type: "text", nullable: false),
+                    Img = table.Column<string>(type: "text", nullable: false),
                     Articul = table.Column<string>(type: "text", nullable: false)
                 },
                 constraints: table =>

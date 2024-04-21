@@ -84,8 +84,3 @@ body {
 .link {
     --bs-link-hover-color-rgb: 25, 135, 84;
 }
-
-.img-card-item {
-    width: 100px;
-    height: auto;
-}

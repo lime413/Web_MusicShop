@@ -12,7 +12,7 @@ using Web_music_feb_jun2024.Models;
 namespace Web_music_feb_jun2024.Migrations
 {
     [DbContext(typeof(MusicContext))]
-    [Migration("20240420165737_Init")]
+    [Migration("20240421133233_Init")]
     partial class Init
     {
         /// <inheritdoc />
@@ -40,6 +40,10 @@ namespace Web_music_feb_jun2024.Migrations
                     b.Property<int>("ClassId")
                         .HasColumnType("integer");
 
+                    b.Property<string>("Img")
+                        .IsRequired()
+                        .HasColumnType("text");
+
                     b.Property<string>("Manufacturer")
                         .IsRequired()
                         .HasColumnType("text");
@@ -50,6 +54,10 @@ namespace Web_music_feb_jun2024.Migrations
 
                     b.Property<decimal>("Price")
                         .HasColumnType("numeric");
+
+                    b.Property<string>("Rating")
+                        .IsRequired()
+                        .HasColumnType("text");
 
                     b.HasKey("Id");
 
