@@ -13,11 +13,6 @@ namespace Web_music_feb_jun2024.Controllers
             _logger = logger;
         }
 
-        public IActionResult Catalog()
-        {
-            return View();
-        }
-
         public IActionResult Home()
         {
             return View();
