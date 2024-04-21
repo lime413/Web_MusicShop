@@ -21,9 +21,9 @@ namespace Web_music_feb_jun2024.Controllers
             else model.instruments = instruments.Take(9);
             return View(model);
         }
-        public IActionResult Product()
+        public IActionResult Product(string? Articul = null)
         {
-            return View();
+            return View(db.Instruments.FirstOrDefault(x => x.Articul.Equals(Articul)));
         }
     }
 }
