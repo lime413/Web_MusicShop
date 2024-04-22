@@ -59,9 +59,10 @@ namespace Web_music_feb_jun2024.Controllers
         {
             if (ModelState.IsValid)
             {
-                db.Users.Add(new Models.User(user.Nickname, user.Email, user.Password));
+                if (db.Users.Where(x => x.Nickname == user.Nickname || x.Email == user.Email).Any()) return View(user);
+                db.Users.Add(new User(user.Nickname, user.Email, user.Password));
                 await db.SaveChangesAsync();
-                return RedirectToAction("Login", user);
+                return RedirectToAction("Login");
             }
             return View(user);
         }
