@@ -1,8 +1,7 @@
 ﻿@{
-    ViewData["Title"] = "Каталог";
-    @model CatalogViewModel;
+    @model ProductViewModel;
+    ViewData["Title"] = Model.instrument.Name;
 }
-
 <div class="container">
     <nav aria-label="breadcrumb" class="nav-breadcrumb">
         <ol class="breadcrumb breadcrumb-chevron p-3 bg-body-tertiary rounded-3">
@@ -13,19 +12,22 @@
             </li>
             <li class="breadcrumb-item">
                 <a class="link-body-emphasis fw-semibold text-decoration-none"
-                asp-controller="Catalog" asp-action="Catalog" asp-route-id="0">
+                   asp-controller="Catalog" asp-action="Catalog" asp-route-id="0">
                     Каталог
                 </a>
             </li>
-            @if (Model.Id > 0)
-            {
-                <li class="breadcrumb-item">
-                    <a class="link-body-emphasis fw-semibold text-decoration-none"
-                    asp-controller="Catalog" asp-action="Catalog" asp-route-id="@Model.Id">
-                        @Model.instrumentClasses.FirstOrDefault(x => x.Id == Model.Id).Name
-                    </a>
-                </li>
-            }
+            <li class="breadcrumb-item">
+                <a class="link-body-emphasis fw-semibold text-decoration-none"
+                   asp-controller="Catalog" asp-action="Catalog" asp-route-id="@Model.instrument.Class.Id">
+                    @Model.instrument.Class.Name
+                </a>
+            </li>
+            <li class="breadcrumb-item">
+                <a class="link-body-emphasis fw-semibold text-decoration-none"
+                   asp-controller="Catalog" asp-action="Product" asp-route-articul="@Model.instrument.Articul">
+                    @Model.instrument.Name
+                </a>
+            </li>
         </ol>
     </nav>
     <div class="row row-cols-2">
@@ -55,7 +57,7 @@
                                             {
                                                 <li>
                                                     <a class="dropdown-item" asp-controller="Catalog"
-                                                    asp-action="Catalog" asp-route-id="@cls2.Id">@cls2.Name</a>
+                                                       asp-action="Catalog" asp-route-id="@cls2.Id">@cls2.Name</a>
                                                 </li>
                                             }
                                         </ul>
@@ -79,33 +81,27 @@
                         @cls.Name
                     </button>
                 }
-                
+
             }
         </div>
         <div class="col col-md-8 col-lg-9">
-            <div class="row row-cols-sm-1 row-cols-md-2 row-cols-lg-3 g-4">
-            @foreach (var instr in Model.instruments)
-            {
-                <div class="col">
-                    <div class="card h-100">
-                        <img src="@instr.Img" style="aspect-ratio: 1/1; object-fit: scale-down;" alt="...">
-                        <div class="card-body">
-                            <p class="card-text">@instr.Class.Name</p>
-                            <a class="link-body-emphasis text-decoration-none" asp-controller="Catalog" asp-action="Product" asp-route-articul="@instr.Articul">
-                                <h5 class="card-title">@instr.Name</h5>
-                            </a>
-                            <p class="card-text card-price">@instr.Price р.</p>
-                            <p class="card-text card-rating">
-                                <i class="icon-star"></i>
-                                @instr.Rating
-                            </p>
-                        </div>
-                        <div class="card-footer">
-                            <a href="#" class="btn btn-primary w-100">В корзину</a>
-                        </div>
-                    </div>
+            <div class="row">
+                <div class="col-lg-4">
+                    <img src="@Model.instrument.Img" style="aspect-ratio: 1/1; object-fit: scale-down;" alt="...">
                 </div>
-            }
+                <div class="col-lg-6">
+                    <h1>@Model.instrument.Name</h1>
+                    <h3>Производитель: @Model.instrument.Manufacturer</h3>
+                    <p>Артикул: @Model.instrument.Articul</p>
+                    <p>
+                        <i class="icon-star"></i>
+                        Рейтинг: @Model.instrument.Rating
+                    </p>
+                </div>
+                <div class="col-lg-2">
+                    <h2>@Model.instrument.Price р.</h2>
+                    <a href="#" class="btn btn-primary w-100">В корзину</a>
+                </div>
             </div>
         </div>
     </div>

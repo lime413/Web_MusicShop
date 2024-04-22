@@ -14,16 +14,18 @@ namespace Web_music_feb_jun2024.Controllers
         public async Task<IActionResult> Catalog(int Id = 0)
         {
             var model = new CatalogViewModel();
-            var instrumentClasses = await db.InstrumentClasses.ToListAsync();
-            var instruments = await db.Instruments.ToListAsync();
-            model.instrumentClasses = instrumentClasses;
-            if (Id > 0) model.instruments = instruments.Where(x => x.Class.Id == Id).Take(9);
-            else model.instruments = instruments.Take(9);
+            model.Id = Id;
+            model.instrumentClasses = await db.InstrumentClasses.ToListAsync();
+            if (Id > 0) model.instruments = await db.Instruments.Where(x => x.Class.Id == Id).Take(9).ToListAsync();
+            else model.instruments = await db.Instruments.Take(9).ToListAsync();
             return View(model);
         }
-        public IActionResult Product(string? Articul = null)
+        public async Task<IActionResult> Product(string? Articul = null)
         {
-            return View(db.Instruments.FirstOrDefault(x => x.Articul.Equals(Articul)));
+            var model = new ProductViewModel();
+            model.instrumentClasses = await db.InstrumentClasses.ToListAsync();
+            model.instrument = await db.Instruments.FirstOrDefaultAsync(x => x.Articul.Equals(Articul));
+            return View(model);
         }
     }
 }
