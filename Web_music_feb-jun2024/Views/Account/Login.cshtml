@@ -1,4 +1,4 @@
-﻿@model Web_music_feb_jun2024.Models.User
+﻿@model Web_music_feb_jun2024.ViewModels.UserRegisterViewModel
 
 @{
     ViewData["Title"] = "Вход";
@@ -17,13 +17,8 @@
                     <span asp-validation-for="Nickname" class="text-danger"></span>
                 </div>
                 <div class="form-group">
-                    <label asp-for="Email" class="control-label mb-2">E-mail</label>
-                    <input asp-for="Email" class="form-control mb-2" />
-                    <span asp-validation-for="Email" class="text-danger"></span>
-                </div>
-                <div class="form-group">
                     <label asp-for="Password" class="control-label mb-2">Пароль</label>
-                    <input asp-for="Password" class="form-control mb-2" />
+                    <input asp-for="Password" class="form-control mb-2" type="password" />
                     <span asp-validation-for="Password" class="text-danger"></span>
                 </div>
                 <div class="form-group">
@@ -32,8 +27,7 @@
             </form>
 
             <div>
-                <p>Нет аккаунта?</p>
-                <a asp-action="Register">Регистрация</a>
+                <p>Нет аккаунта? <a asp-action="Register">Регистрация</a></p>
             </div>
 
             @section Scripts {

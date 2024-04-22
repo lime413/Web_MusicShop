@@ -1,6 +1,7 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using Web_music_feb_jun2024.Models;
+using Web_music_feb_jun2024.ViewModels;
 
 namespace Web_music_feb_jun2024.Controllers
 {

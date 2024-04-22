@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;
@@ -9,6 +10,7 @@ using Web_music_feb_jun2024.Models;
 
 namespace Web_music_feb_jun2024.Controllers
 {
+    [Authorize(Roles ="Administrator,Moderator")]
     public class InstrumentsController : Controller
     {
         private readonly MusicContext _context;

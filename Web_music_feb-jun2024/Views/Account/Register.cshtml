@@ -1,4 +1,4 @@
-﻿@model Web_music_feb_jun2024.Models.User
+﻿@model Web_music_feb_jun2024.ViewModels.UserRegisterViewModel
 
 @{
     ViewData["Title"] = "Регистрация";
@@ -9,7 +9,7 @@
         <div class="col col-8 offset-2">
             <h4>Регистрация</h4>
             <hr />
-            <form asp-action="Login">
+            <form asp-action="Register">
                 <div asp-validation-summary="ModelOnly" class="text-danger"></div>
                 <div class="form-group">
                     <label asp-for="Nickname" class="control-label mb-2">Никнейм</label>
@@ -23,7 +23,7 @@
                 </div>
                 <div class="form-group">
                     <label asp-for="Password" class="control-label mb-2">Пароль</label>
-                    <input asp-for="Password" class="form-control mb-2" />
+                    <input asp-for="Password" class="form-control mb-2" type="password" />
                     <span asp-validation-for="Password" class="text-danger"></span>
                 </div>
                 <div class="form-group">

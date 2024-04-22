@@ -60,19 +60,26 @@
                                 <li><a class="dropdown-item" asp-controller="Help" asp-action="Guarantee">Гарантия</a></li>
                                 <li><a class="dropdown-item" asp-controller="Help" asp-action="ServiceCentres">Сервис-центры</a></li>
                                 <li><a class="dropdown-item" asp-controller="Help" asp-action="ExchangeAndReturn">Обмен и возврат</a></li>
-                                <li><a class="dropdown-item" asp-controller="Instruments" asp-action="Index">Админ</a></li>
+                                @if (Context.User.IsInRole("Administrator") || Context.User.IsInRole("Moderator"))
+                                {
+                                    <li><a class="dropdown-item" asp-controller="Instruments" asp-action="Index">Админ</a></li>
+                                }
                             </ul>
                         </li>
                         <li class="nav-item nav-item-mine">
-                            <a class="nav-link text-dark" asp-area="" asp-controller="Account" asp-action="Login">
-                                Войти
-                                <i class="icon-user navbar-icon"></i>
-                            </a>
-                        </li>
-                        <li class="nav-item nav-item-mine">
-                            <a class="nav-link text-dark" asp-area="" asp-controller="Instruments" asp-action="Index">
-                                Редактировать
-                            </a>
+                            @if (Context.User.Identity.IsAuthenticated)
+                            {
+                                <a class="nav-link text-dark" asp-area="" asp-controller="Account" asp-action="Logout">
+                                    Выход
+                                    <i class="icon-user navbar-icon"></i>
+                                </a>
+                            } else
+                            {
+                                <a class="nav-link text-dark" asp-area="" asp-controller="Account" asp-action="Login">
+                                    Войти
+                                    <i class="icon-user navbar-icon"></i>
+                                </a>
+                            }
                         </li>
                     </ul>
                     <form class="d-flex" role="search">
