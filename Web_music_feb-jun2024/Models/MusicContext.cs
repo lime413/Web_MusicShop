@@ -8,6 +8,7 @@ namespace Web_music_feb_jun2024.Models
         {
             Database.EnsureCreated();
         }
+        public DbSet<User> Users { get; set; } = null!;
         public DbSet<Instrument> Instruments { get; set; } = null!;
         public DbSet<InstrumentClass> InstrumentClasses { get; set; } = null!;
     }

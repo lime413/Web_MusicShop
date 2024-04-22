@@ -1,0 +1,41 @@
+﻿@model Web_music_feb_jun2024.Models.User
+
+@{
+    ViewData["Title"] = "Регистрация";
+}
+
+<section>
+    <div class="row">
+        <div class="col col-8 offset-2">
+            <h4>Регистрация</h4>
+            <hr />
+            <form asp-action="Login">
+                <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+                <div class="form-group">
+                    <label asp-for="Nickname" class="control-label mb-2">Никнейм</label>
+                    <input asp-for="Nickname" class="form-control mb-2" />
+                    <span asp-validation-for="Nickname" class="text-danger"></span>
+                </div>
+                <div class="form-group">
+                    <label asp-for="Email" class="control-label mb-2">E-mail</label>
+                    <input asp-for="Email" class="form-control mb-2" />
+                    <span asp-validation-for="Email" class="text-danger"></span>
+                </div>
+                <div class="form-group">
+                    <label asp-for="Password" class="control-label mb-2">Пароль</label>
+                    <input asp-for="Password" class="form-control mb-2" />
+                    <span asp-validation-for="Password" class="text-danger"></span>
+                </div>
+                <div class="form-group">
+                    <input type="submit" value="Зарегистрироваться" class="btn btn-primary mt-3 mb-3" />
+                </div>
+            </form>
+
+            @section Scripts {
+                @{
+                    await Html.RenderPartialAsync("_ValidationScriptsPartial");
+                }
+            }
+        </div>
+    </div>
+</section>

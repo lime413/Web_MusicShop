@@ -60,7 +60,7 @@ namespace Web_music_feb_jun2024.Migrations
 
                     b.HasIndex("ClassId");
 
-                    b.ToTable("Instruments");
+                    b.ToTable("Instruments", (string)null);
                 });
 
             modelBuilder.Entity("Web_music_feb_jun2024.Models.InstrumentClass", b =>
@@ -82,7 +82,7 @@ namespace Web_music_feb_jun2024.Migrations
 
                     b.HasIndex("ParentId");
 
-                    b.ToTable("InstrumentClasses");
+                    b.ToTable("InstrumentClasses", (string)null);
                 });
 
             modelBuilder.Entity("Web_music_feb_jun2024.Models.Instrument", b =>
