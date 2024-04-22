@@ -1,58 +1,65 @@
 ﻿@model Web_music_feb_jun2024.Models.Instrument
 
 @{
-    ViewData["Title"] = "Create";
+    ViewData["Title"] = "Добавить";
 }
 
-<h1>Create</h1>
+<section>
+    <div class="row">
+        <div class="col col-8 offset-2">
+            <h4>Добавить новый товар</h4>
+            <hr />
+            <div class="row">
+                <div class="col-md-4">
+                    <form asp-action="Create">
+                        <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+                        <input type="hidden" asp-for="Id" />
+                        <div class="form-group">
+                            <label asp-for="Name" class="control-label mb-2">Название</label>
+                            <input asp-for="Name" class="form-control mb-2" />
+                            <span asp-validation-for="Name" class="text-danger"></span>
+                        </div>
+                        <div class="form-group">
+                            <label asp-for="Manufacturer" class="control-label mb-2">Производитель</label>
+                            <input asp-for="Manufacturer" class="form-control mb-2" />
+                            <span asp-validation-for="Manufacturer" class="text-danger"></span>
+                        </div>
+                        <div class="form-group">
+                            <label asp-for="Price" class="control-label mb-2">Цена (руб.)</label>
+                            <input asp-for="Price" class="form-control mb-2" />
+                            <span asp-validation-for="Price" class="text-danger"></span>
+                        </div>
+                        <div class="form-group">
+                            <label asp-for="Rating" class="control-label mb-2">Рейтинг</label>
+                            <input asp-for="Rating" class="form-control mb-2" />
+                            <span asp-validation-for="Rating" class="text-danger"></span>
+                        </div>
+                        <div class="form-group">
+                            <label asp-for="Img" class="control-label mb-2">Ссылка на изображение</label>
+                            <input asp-for="Img" class="form-control mb-2" />
+                            <span asp-validation-for="Img" class="text-danger"></span>
+                        </div>
+                        <div class="form-group">
+                            <label asp-for="Articul" class="control-label mb-2">Артикул</label>
+                            <input asp-for="Articul" class="form-control mb-2" />
+                            <span asp-validation-for="Articul" class="text-danger"></span>
+                        </div>
+                        <div class="form-group">
+                            <input type="submit" value="Сохранить" class="btn btn-primary mt-3 mb-3" />
+                        </div>
+                    </form>
+                </div>
+            </div>
 
-<h4>Instrument</h4>
-<hr />
-<div class="row">
-    <div class="col-md-4">
-        <form asp-action="Create">
-            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
-            <div class="form-group">
-                <label asp-for="Name" class="control-label"></label>
-                <input asp-for="Name" class="form-control" />
-                <span asp-validation-for="Name" class="text-danger"></span>
+            <div>
+                <a asp-action="Index">Вернуться к списку товаров</a>
             </div>
-            <div class="form-group">
-                <label asp-for="Manufacturer" class="control-label"></label>
-                <input asp-for="Manufacturer" class="form-control" />
-                <span asp-validation-for="Manufacturer" class="text-danger"></span>
-            </div>
-            <div class="form-group">
-                <label asp-for="Price" class="control-label"></label>
-                <input asp-for="Price" class="form-control" />
-                <span asp-validation-for="Price" class="text-danger"></span>
-            </div>
-            <div class="form-group">
-                <label asp-for="Rating" class="control-label"></label>
-                <input asp-for="Rating" class="form-control" />
-                <span asp-validation-for="Rating" class="text-danger"></span>
-            </div>
-            <div class="form-group">
-                <label asp-for="Img" class="control-label"></label>
-                <input asp-for="Img" class="form-control" />
-                <span asp-validation-for="Img" class="text-danger"></span>
-            </div>
-            <div class="form-group">
-                <label asp-for="Articul" class="control-label"></label>
-                <input asp-for="Articul" class="form-control" />
-                <span asp-validation-for="Articul" class="text-danger"></span>
-            </div>
-            <div class="form-group">
-                <input type="submit" value="Create" class="btn btn-primary" />
-            </div>
-        </form>
+
+            @section Scripts {
+                @{
+                    await Html.RenderPartialAsync("_ValidationScriptsPartial");
+                }
+            }
+        </div>
     </div>
-</div>
-
-<div>
-    <a asp-action="Index">Back to List</a>
-</div>
-
-@section Scripts {
-    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
-}
+</section>
